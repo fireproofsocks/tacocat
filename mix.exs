@@ -8,6 +8,7 @@ defmodule Tacocat.MixProject do
       app: :tacocat,
       description: "Playful text manipulations including upside down and backwards",
       version: @version,
+      package: package(),
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -15,6 +16,14 @@ defmodule Tacocat.MixProject do
         source_ref: "v#{@version}",
         logo: "docs/logo.png"
       ]
+    ]
+  end
+
+  defp package do
+    [
+      maintainers: ["Everett Griffiths"],
+      licenses: ["MIT"],
+      links: %{github: "https://github.com/fireproofsocks/tacocat"}
     ]
   end
 
