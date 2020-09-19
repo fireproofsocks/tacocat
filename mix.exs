@@ -37,7 +37,7 @@ defmodule Tacocat.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ex_doc, "~> 0.22", only: [:dev, :test], runtime: false}
+      {:ex_doc, "~> 0.22.6", only: [:dev, :test], runtime: false}
     ]
   end
 end
