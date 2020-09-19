@@ -84,6 +84,8 @@ defmodule Tacocat.Flipper do
 
       iex> Tacocat.backflip("Who are these people?")
       "¿ǝʃdoǝd ǝsǝɥʇ ǝɹɐ oɥM"
+
+  Adapted from http://www.fileformat.info/convert/text/upside-down-map.htm
   """
   def backflip(text) when is_binary(text) do
     text
@@ -92,7 +94,7 @@ defmodule Tacocat.Flipper do
   end
 
   @doc """
-  This funciton turns the given text "upside down" by replacing characters with some Unicode equivalent that looks
+  This function turns the given text "upside down" by replacing characters with some Unicode equivalent that looks
   similar to the input rotated 180 degrees. If a character doesn't have its flip mapped, it is passed through unchanged.
   Often, you may want `backflip/2` instead.
 
@@ -100,6 +102,8 @@ defmodule Tacocat.Flipper do
 
       iex> Tacocat.Flipper.flip("Who are these people?")
       "Mɥo ɐɹǝ ʇɥǝsǝ dǝodʃǝ¿"
+
+  Adapted from http://www.fileformat.info/convert/text/upside-down-map.htm
   """
   def flip(text) when is_binary(text) do
     text

@@ -1,6 +1,6 @@
 # Tacocat
 
-A playful collection of text effects. For now, there's just one that can flip text upside down and backwards:
+A playful collection of text effects including functions that can flip text upside down and backwards:
 
 ```
 iex> Tacocat.backflip("Who are these people?")

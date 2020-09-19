@@ -1,11 +1,13 @@
 defmodule Tacocat do
   @moduledoc """
-  This module provides a simple API: its functions are the ones users should use.
+  This module provides an interface for text manipulation functions.
+  For the ease of organization and encapsulation, the functions are delegated to stand-alone modules.
   """
   alias Tacocat.Flipper
   alias Tacocat.BonIver
 
-  defdelegate bon_iver(text), to: BonIver, as: :transform
+  @doc since: "0.2.0"
+  defdelegate bon_iver(text), to: BonIver, as: :bon_iver
 
   defdelegate flip(text), to: Flipper, as: :flip
 

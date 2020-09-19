@@ -1,10 +1,7 @@
 defmodule Tacocat.BonIver do
   @moduledoc """
-
-
-  See also:
-  - [Unicode Table](https://unicode-table.com/en/#0461)
-  - [Miscellaneous Symbols](https://en.wikipedia.org/wiki/Miscellaneous_Symbols)
+  Embodies the text transformations used by [Bon Iver](https://boniver.org/)
+  on their [22, A Million](https://en.wikipedia.org/wiki/22,_A_Million) album.
   """
 
   @doc """
@@ -19,8 +16,15 @@ defmodule Tacocat.BonIver do
 
       iex> Tacocat.bon_iver("Creeks")
       "[c]RΣΣkS"
+
+  See also:
+
+  - [Unicode Table](https://unicode-table.com/en/#0461)
+  - [Miscellaneous Symbols](https://en.wikipedia.org/wiki/Miscellaneous_Symbols)
   """
-  def transform(text) when is_binary(text), do: text |> String.downcase() |> mod("")
+
+  @doc since: "0.2.0"
+  def bon_iver(text) when is_binary(text), do: text |> String.downcase() |> mod("")
 
   defp mod("", acc), do: acc
   defp mod("ae" <> tail, acc), do: mod(tail, acc <> Enum.random(["ǣ", "Ǣ", "Ӕ", "ӕ"]))
