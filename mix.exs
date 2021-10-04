@@ -1,12 +1,13 @@
 defmodule Tacocat.MixProject do
   use Mix.Project
 
-  @version "0.2.0"
+  @version "0.3.0"
 
   def project do
     [
       app: :tacocat,
-      description: "Playful text manipulations including upside down, backwards, and Bon Iver!",
+      description:
+        "Playful text manipulations and animations including Nyan Cat, upside down, backwards, and Bon Iver!",
       version: @version,
       package: package(),
       elixir: "~> 1.10",
